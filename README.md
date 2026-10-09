@@ -51,6 +51,12 @@ Then run `admin/cli/upgrade.php` or visit *Site administration > Notifications*.
 
 Changes compared to upstream
 ----------------------------
+### 2026100901 (2026100901-m53)
+- `view.php`: replaced the Bootstrap 4 class `form-inline` (removed with Bootstrap 5 in Moodle 5.0) in the bulk
+  actions bar with flex utilities, taken from upstream PR [#214](https://github.com/catalyst/moodle-mod_reengagement/pull/214).
+- Moodle coding style fixed with phpcbf (no functional changes).
+- CI: release job and PR version bump check disabled for the fork, manual runs enabled.
+
 ### 2026100900 (2026100900-m53)
 - `version.php`: supported range set to Moodle 4.5 - 5.3 (`[405, 503]`), version bumped to `2026100900`
   so it installs as an upgrade over earlier local builds (e.g. `2026030600-m51`).
