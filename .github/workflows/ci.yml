@@ -7,3 +7,7 @@ jobs:
   ci:
     uses: catalyst/catalyst-moodle-workflows/.github/workflows/ci.yml@main
     # This fork does not publish to moodle.org, so no moodle_org_token secret is passed.
+    with:
+      disable_release: true
+      # Changes here are mostly metadata/CI only, do not require a version bump on every PR.
+      disable_version_bump_check: true
