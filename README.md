@@ -55,7 +55,9 @@ Changes compared to upstream
 - `view.php`: replaced the Bootstrap 4 class `form-inline` (removed with Bootstrap 5 in Moodle 5.0) in the bulk
   actions bar with flex utilities, taken from upstream PR [#214](https://github.com/catalyst/moodle-mod_reengagement/pull/214).
 - Moodle coding style fixed with phpcbf (no functional changes).
-- CI: release job and PR version bump check disabled for the fork, manual runs enabled.
+- CI: release job and PR version bump check disabled for the fork, manual runs enabled. Additional workflow
+  `moodle-plugin-ci.yml` tests against MOODLE_503_STABLE with moodlehq/moodle-plugin-ci (PHP 8.3/pgsql 17,
+  PHP 8.4/MariaDB 11.4).
 
 ### 2026100900 (2026100900-m53)
 - `version.php`: supported range set to Moodle 4.5 - 5.3 (`[405, 503]`), version bumped to `2026100900`
