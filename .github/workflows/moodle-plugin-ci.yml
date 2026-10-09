@@ -41,7 +41,7 @@ jobs:
 
     steps:
       - name: Check out repository code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           path: plugin
 
@@ -73,7 +73,7 @@ jobs:
 
       - name: Moodle Code Checker
         if: ${{ !cancelled() }}
-        run: moodle-plugin-ci phpcs --max-warnings -1
+        run: moodle-plugin-ci phpcs --max-warnings=-1
 
       - name: Validating
         if: ${{ !cancelled() }}
